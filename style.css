@@ -203,15 +203,12 @@ nav {
 /* ==================Mobile Responsive=========== 
 */
 @media screen and (max-width: 576px) {
-  .display {
-    display: none;
-  }
   nav,
   ul,
-  .features-list,
   .sponspors-image {
     flex-direction: column;
   }
+
   ul li {
     margin: 10px;
   }
@@ -265,7 +262,15 @@ nav {
     padding: 20px 85px;
     border-radius: 5px;
   }
-
+  .display {
+    display: none;
+  }
+  .features-list {
+    flex-direction: column;
+  }
+  .feature-list-image {
+    width: 300px !important;
+  }
   .features-image span {
     font-weight: 600;
     font-size: 25px;
