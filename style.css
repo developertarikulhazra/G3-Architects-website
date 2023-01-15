@@ -71,6 +71,9 @@ nav {
   font-size: 18px;
   color: #424242;
 }
+.menu-bar {
+  visibility: hidden;
+}
 /* ==========header banner style css=============== */
 .header-banner-title {
   font-weight: 700;
@@ -147,22 +150,27 @@ nav {
   gap: 124px;
   margin: 100px 0;
 }
+/* ============image box hover animation=========== */
 .image-box {
   padding: 45px 35px;
   border: 2px solid var(--primary);
   border-radius: 8px;
+  transition: background-color 0.7s ease-in-out, transform 0.8s linear;
+}
+.image-box:hover {
+  background-color: var(--primary);
+  color: var(--btn-color);
+  transform: rotate(360deg);
 }
 .image-box h2 {
   font-weight: 600;
   font-size: 45px;
   line-height: 53px;
-  color: #424242;
 }
 .image-box p {
   font-weight: 600;
   font-size: 20px;
   line-height: 23px;
-  color: var(--text-color);
 }
 /*  <!-- ===========Extra section(Service section)================ --> */
 .services span {
@@ -194,4 +202,47 @@ nav {
   border-radius: 8px;
   padding: 40px;
   margin-bottom: 100px;
+}
+/* ==================Mobile Responsive=========== 
+
+*/
+
+@media only screen and (max-width: 576px) {
+  .container {
+    width: 80%;
+  }
+  .header-banner-title {
+    font-size: 42px;
+  }
+  .banner-image img {
+    width: 80%;
+    height: 30%;
+  }
+  .portfolio {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .our-feature-image {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .our-feature-section,
+  .features-box,
+  .features-list,
+  .sponspors-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sponspors-image img {
+    width: 300px;
+    height: 100px;
+    margin: 30px;
+  }
+  .portfolio img {
+    width: 80%;
+    height: 350px;
+    margin: 20px auto;
+  }
 }
